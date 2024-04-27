@@ -23,10 +23,11 @@ poetry install
 ```
 
 Before running the application, remember to open [Nvidia Omniverse Audio2Face](https://developer.nvidia.com/omniverse-audio2face) 
-and to activate the streaming gRPC server. You can do it by clicking on `Audio2Face`, then click on `Open Demo Scene` and then on 
-`Full Face Core + Streaming Player`. See image below for reference.
+and to activate the streaming gRPC server. You can do it by clicking on `Audio2Face`, then click on `AI Models` if it is not selected already.
+![](docs/step-1.png)
 
-![](docs/a2f-streaming-setup.png?raw=true "audio2face")
+In `AI Models` tab, choose `Streaming` for `Audio Player` then press `Get Started`
+![](docs/step-2.png)
 
 In addition, you have to have a Google Cloud account and a Google Cloud project with the following APIs enabled:
 - Google Speech-to-Text API
