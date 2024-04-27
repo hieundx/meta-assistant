@@ -1,8 +1,4 @@
-import time
 import typer
-import queue
-import threading
-import sounddevice as sd
 
 from meta_assistant import logger
 from meta_assistant.domain import MicrophoneStream

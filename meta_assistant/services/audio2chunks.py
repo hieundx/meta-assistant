@@ -21,7 +21,7 @@ class Audio2Chunks:
         wav_file = "{name}.wav".format(name=audio_id)
 
         # Save audio content to an mp3 file
-        with open(mp3_file, "wb") as out:
+        with open(mp3_file, "wb+") as out:
             out.write(audio)
 
         # Convert MP3 to WAV

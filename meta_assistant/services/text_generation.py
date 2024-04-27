@@ -1,16 +1,20 @@
-import openai
+from openai import OpenAI
 
 from meta_assistant import logger
-
 
 class TextGenerator:
     @staticmethod
     def generate(key: str, model: str, input: str, instruction: str):
-        openai.api_key = key
-        prompt = input + ". - " + instruction
-        logger.debug("Prompt: {}".format(prompt))
-        response = openai.Completion.create(
-            model=model, prompt=prompt, best_of=1, max_tokens=50
+        client = OpenAI(api_key=key)
+
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "user",
+                    "content": input,
+                }
+            ],
+            model="gpt-3.5-turbo",
         )
 
-        return response["choices"][0]["text"]
+        return chat_completion.choices[0].message.content

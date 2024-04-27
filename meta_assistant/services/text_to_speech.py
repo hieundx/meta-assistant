@@ -20,7 +20,7 @@ class TextToSpeech:
         # voice gender ("neutral")
         voice = texttospeech.VoiceSelectionParams(
             language_code=language_code,
-            ssml_gender=texttospeech.SsmlVoiceGender.NEUTRAL,
+            ssml_gender=texttospeech.SsmlVoiceGender.MALE,
         )
 
         # Select the type of audio file you want returned
